@@ -18,6 +18,16 @@ insert into artists values (1,'Arijit Singh','India','Bollywood'),
 (13,'Atif Aslam','Pakistan','Pop'),
 (14,'Justin Bieber','Canada','Pop'),
 (15,'Adele','UK','Soul');
+
+set autocommit =0;
+
+insert into artists values (16,'AbhiSingh','India','pop');
+ 
+ delete from  artists where artist_id=10;
+ 
+ rollback;
+ 
+ commit;
 select * from artists;
 create table songs (song_id int primary key,artist_id int,song_name varchar(100) not null,duration int,
     release_date date,foreign key (artist_id) references artists(artist_id));
@@ -30,4 +40,6 @@ insert into songs values
 (103,3,'Love Story',5,'2024-01-10'),
 (104,4,'Perfect',4,'2024-01-15'),
 (105,5,'Adiye',4,'2024-01-20');
+
+select *from  songs where duration<=2;
 select *from songs;

@@ -32,4 +32,9 @@ insert into bookings values
 (304,4,'City Center','Beach',100.00,'2024-03-04'),
 (305,5,'Silk Board','Electronic City',150.00,'2024-03-05');
 
+select *from bookings where fare>100;
+select *from bookings where  pickup_location like "n%";
+select *from bookings where rider_id between 2 and 5;
+select *from bookings where booking_date between '2024-03-03' and '2024-03-05';
+
 select * from bookings;
