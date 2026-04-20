@@ -60,3 +60,14 @@ select * from user_info where dob between '2001-01-01' and '2003-12-31';
 select * from user_info where age not between 20 and 22;
 select * from user_info where dob not between '2002-01-01' and '2004-12-31';
 select * from user_info where age between 19 and 24;
+
+select user_id,userName from user_info;
+
+  select user_id as usernumber ,userName as user from user_info;
+  
+  select sum (age) from user_info;
+  select count(*) from user_info;
+  select avg(age) from user_info;
+  select min(age) minimum_age from user_info;
+  select max (age)maxmmum_age from user_info;
+  
